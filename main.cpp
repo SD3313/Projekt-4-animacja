@@ -39,7 +39,12 @@ void klawisz(GLubyte key, int x, int y)
 		else
 			s = true;
 		break;
-
+	case 'm':  
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+		break;
+	case 'n':
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+		break;
 	}
 
 }
