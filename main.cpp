@@ -13,10 +13,13 @@ int screen_width = 640;
 int screen_height = 480;
 
 float vertices[] = {
-	-0.5f, -0.5f, 0.0f,
-	0.5f, -0.5f, 0.0f,
+	0.0f, -0.5f, 0.0f,
+	1.0f, 0.0f, 0.0f,
 	0.0f,  0.5f, 0.0f,
-	-0.5f,  0.5f, 0.0f,
+
+	0.0f, -0.5f, 0.0f,
+	-1.0f,  0.0f, 0.0f,
+	0.0f,  0.5f, 0.0f,
 };
 
 
@@ -60,7 +63,7 @@ void rysuj(void)
 	glUseProgram(programID); //u┐yj programu, czyli naszego shadera	
 
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);//GL_FILL, GL_POINT
-	glDrawArrays(GL_TRIANGLES, 0, 3); // Zaczynamy od 0 i rysujemy wszystkie wierzcho│ki
+	glDrawArrays(GL_TRIANGLES, 0, 6); // Zaczynamy od 0 i rysujemy wszystkie wierzcho│ki
 
 	//glFlush();
 	glutSwapBuffers();
